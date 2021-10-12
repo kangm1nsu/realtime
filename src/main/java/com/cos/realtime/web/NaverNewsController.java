@@ -1,6 +1,7 @@
 package com.cos.realtime.web;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +27,7 @@ import reactor.core.scheduler.Schedulers;
 public class NaverNewsController {
 	
 	private final NaverNewsRepository naverNewsRepository;
+	@CrossOrigin
 	@GetMapping(value = "/naverNews", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
 	public Flux<NaverNews>home(){
 		//db.runCommand( { convertToCapped: 'naver_realtime', size: 8192 } ) 

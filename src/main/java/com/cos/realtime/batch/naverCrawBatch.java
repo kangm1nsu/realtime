@@ -31,7 +31,7 @@ public class naverCrawBatch {
 		// 2021.10.20
 		
 //		@Scheduled(cron = "**1***", zone = "Asia/Seoul")
-		@Scheduled(cron = "0 0 1 * * *", zone = "Asia/Seoul")
+		@Scheduled(cron = "0 14 21 * * *", zone = "Asia/Seoul")
 		public void collectTest() {
 			List<NaverNews> naverNewsList = new ArrayList<>();
 			int errorCount = 0;
